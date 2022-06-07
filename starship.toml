@@ -12,6 +12,9 @@ $character"""
 
 [directory]
 style = "bold green"
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = " "
 
 [character]
 success_symbol = "[❯](purple)"
@@ -20,18 +23,18 @@ vicmd_symbol = "[❮](green)"
 
 [git_branch]
 symbol = " "
-format = "[$branch]($style)"
+format = "$symbol[$branch ]($style)"
 style = "bright-black"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
 style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
+conflicted = " "
+untracked = "⇡ "
+modified = " "
+staged = " "
+renamed = " "
+deleted = " "
 stashed = "≡"
 
 [git_state]
