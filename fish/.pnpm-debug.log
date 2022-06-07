@@ -1,0 +1,20 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 info pnpm": {
+    "message": "Copying pnpm CLI from /private/var/folders/x_/yvx9y_jx29z2bkgmvzwzjbrm0000gn/T/tmp.Vg2euq0p/pnpm to /Users/kaos/Library/pnpm/pnpm",
+    "prefix": "/Users/kaos/.config/fish"
+  },
+  "2 error pnpm": {
+    "code": "ERR_PNPM_BAD_SHELL_SECTION",
+    "hint": "If you want to override the existing configuration section, use the --force option",
+    "wanted": "# pnpm\nset -gx PNPM_HOME \"/Users/kaos/Library/pnpm\"\nset -gx PATH \"$PNPM_HOME\" $PATH\n# pnpm end",
+    "err": {
+      "name": "pnpm",
+      "message": "The config file at \"/Users/kaos/.config/fish/config.fish already contains a pnpm section but with other configuration",
+      "code": "ERR_PNPM_BAD_SHELL_SECTION",
+      "stack": "pnpm: The config file at \"/Users/kaos/.config/fish/config.fish already contains a pnpm section but with other configuration\n    at updateShellConfig (/snapshot/dist/pnpm.cjs)\n    at async setupFishShell (/snapshot/dist/pnpm.cjs)\n    at async updateShell (/snapshot/dist/pnpm.cjs)\n    at async Object.handler [as setup] (/snapshot/dist/pnpm.cjs)\n    at async /snapshot/dist/pnpm.cjs\n    at async run (/snapshot/dist/pnpm.cjs)\n    at async runPnpm (/snapshot/dist/pnpm.cjs)\n    at async /snapshot/dist/pnpm.cjs"
+    }
+  }
+}

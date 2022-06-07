@@ -1,0 +1,42 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [1.1.1.1, 1.0.0.1]
+    enhanced-mode: redir-host
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://dns.google/dns-query']
+    fallback: ['tls://1.0.0.1:53', 'https://cloudflare-dns.com/dns-query', 'https://doh.pub/dns-query']
+    fallback-filter: { geoip: false, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+proxies:
+    - { name: '🇻🇳 Hồ Chí Minh', type: vmess, server: 0001.hcm.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇻🇳 Hà Nội', type: vmess, server: 0001.hn.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇭🇰 Hong Kong', type: vmess, server: 0001.hk.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇸🇬 Singapore', type: vmess, server: 0001.sg.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇺🇸 USA', type: vmess, server: 0001.us.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇰🇷 Korea', type: vmess, server: 0001.kr.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇯🇵 Japan', type: vmess, server: 0001.jp.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇦🇺 Australia', type: vmess, server: 0001.au.genzpn.com, port: 80, uuid: 568a40cb-6c4b-4bd3-a80f-a5233529817b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: dl.ops.kgvn.garenanow.com.akamaized.net } } }
+    - { name: '🇻🇳 Hồ Chí Minh [TLS]', type: trojan, server: 0001.hcm.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇻🇳 Hà Nội [TLS]', type: trojan, server: 0001.hn.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇭🇰 Hong Kong [TLS]', type: trojan, server: 0001.hk.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇸🇬 Singapore [TLS]', type: trojan, server: 0001.sg.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇺🇸 USA [TLS]', type: trojan, server: 0001.us.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇰🇷 Korea [TLS]', type: trojan, server: 0001.kr.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇯🇵 Japan [TLS]', type: trojan, server: 0001.jp.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+    - { name: '🇦🇺 Australia [TLS]', type: trojan, server: 0001.au.genzpn.com, port: 443, password: 568a40cb-6c4b-4bd3-a80f-a5233529817b, udp: true, sni: dl.ops.kgvn.garenanow.com.akamaized.net, skip-cert-verify: true }
+proxy-groups:
+    - { name: GenzPN Services, type: select, proxies: ['♻️ Tự chọn', '🔯 Auto đổi máy chủ (Ping ổn định)', '🇻🇳 Hồ Chí Minh', '🇻🇳 Hà Nội', '🇭🇰 Hong Kong', '🇸🇬 Singapore', '🇺🇸 USA', '🇰🇷 Korea', '🇯🇵 Japan', '🇦🇺 Australia', '🇻🇳 Hồ Chí Minh [TLS]', '🇻🇳 Hà Nội [TLS]', '🇭🇰 Hong Kong [TLS]', '🇸🇬 Singapore [TLS]', '🇺🇸 USA [TLS]', '🇰🇷 Korea [TLS]', '🇯🇵 Japan [TLS]', '🇦🇺 Australia [TLS]'] }
+    - { name: '♻️ Tự chọn', type: url-test, proxies: ['🇻🇳 Hồ Chí Minh', '🇻🇳 Hà Nội', '🇭🇰 Hong Kong', '🇸🇬 Singapore', '🇺🇸 USA', '🇰🇷 Korea', '🇯🇵 Japan', '🇦🇺 Australia', '🇻🇳 Hồ Chí Minh [TLS]', '🇻🇳 Hà Nội [TLS]', '🇭🇰 Hong Kong [TLS]', '🇸🇬 Singapore [TLS]', '🇺🇸 USA [TLS]', '🇰🇷 Korea [TLS]', '🇯🇵 Japan [TLS]', '🇦🇺 Australia [TLS]'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: '🔯 Auto đổi máy chủ (Ping ổn định)', type: fallback, proxies: ['🇻🇳 Hồ Chí Minh', '🇻🇳 Hà Nội', '🇭🇰 Hong Kong', '🇸🇬 Singapore', '🇺🇸 USA', '🇰🇷 Korea', '🇯🇵 Japan', '🇦🇺 Australia', '🇻🇳 Hồ Chí Minh [TLS]', '🇻🇳 Hà Nội [TLS]', '🇭🇰 Hong Kong [TLS]', '🇸🇬 Singapore [TLS]', '🇺🇸 USA [TLS]', '🇰🇷 Korea [TLS]', '🇯🇵 Japan [TLS]', '🇦🇺 Australia [TLS]'], url: 'http://dns.google/dns-query', interval: 7200 }
+rule-providers:
+    hostsVN: { type: http, behavior: domain, url: 'https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-clash-rule.yaml', path: ./ruleset/hostsVN-clash-rule.yaml, interval: 86400 }
+rules:
+    - 'RULE-SET,hostsVN,REJECT'
+    - 'MATCH,GenzPN Services'

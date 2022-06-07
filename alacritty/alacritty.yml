@@ -1,0 +1,58 @@
+import:
+  - ~/.config/alacritty/colors/dracula.yml
+
+window:
+  position:
+    x: 0
+    y: 0
+  padding:
+    x: 15
+    y: 20
+  # dynamic_padding: true
+  decorations: buttonless
+  opacity: 1
+  startup_mode: Maximized
+
+font:
+  normal:
+    family: RobotoMono Nerd Font
+    style: Light
+  bold:
+    family: RobotoMono Nerd Font
+    style: Bold
+  italic:
+    family: RobotoMono Nerd Font
+    style: Italic
+  size: 12
+  offset:
+    x: 1
+    y: 8
+  use_thin_strokes: true
+
+scrolling:
+  history: 10000
+
+
+
+selection:
+  save_to_clipboard: true
+
+# mouse:
+  # hide_when_typing: true
+
+key_bindings:
+  - { key: Back, mods: Super, chars: "\x15" } # Delete all typing <Cmd-Backspace>
+  - { key: A, mods: Command, chars: "\x01" } # <Cmd-A> is tmux prefix
+  - { key: C, mods: Command, chars: "\x03" } # <Cmd-C> for <C-C>
+  - { key: J, mods: Command, chars: "\x0a" }
+  - { key: K, mods: Command, chars: "\x0b" }
+  - { key: N, mods: Command, chars: "\x0e" }
+  - { key: O, mods: Command, chars: "\x0f" }
+  - { key: P, mods: Command, chars: "\x10" }
+  - { key: R, mods: Command, chars: "\x12" }
+  - { key: U, mods: Command, chars: "\x15" }
+  - { key: W, mods: Command, chars: "\x17" }
+
+  - { key: C, mods: Command|Shift, action: Copy } # <Cmd-Shift-C> for copy selecting text
+  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
+
