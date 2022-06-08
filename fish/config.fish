@@ -19,7 +19,9 @@ alias ls "exa -l --icons"
 alias l "exa -l -a --icons"
 alias c "clear"
 alias vi "nvim"
+
 alias gs "git status"
+alias gsc "git commit -S -m"
 
 alias tmn "tmux new-session -s"
 alias tma "tmux attach"
