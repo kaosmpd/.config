@@ -22,6 +22,7 @@ alias vi "nvim"
 
 alias gs "git status"
 alias gsc "git commit -S -m"
+alias gp "git push -u origin"
 
 alias tmn "tmux new-session -s"
 alias tma "tmux attach"
