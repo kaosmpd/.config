@@ -6,9 +6,10 @@
 function fish_greeting
 end
 
+set fish_history ''
 set -gx GPG_TTY (tty)
 set -x GOPATH ~/go # the -x flag exports the variable
-set PATH /Users/nhhao/.development/flutter/bin/ $PATH
+set PATH $HOME/.development/flutter/bin/ $PATH
 set PATH $PATH $GOPATH/bin
 set PATH $PATH $HOME/.pub-cache/bin
 set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
