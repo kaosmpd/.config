@@ -16,7 +16,7 @@ window:
 font:
   normal:
     family: RobotoMono Nerd Font
-    style: Light
+    style: Regular
   bold:
     family: RobotoMono Nerd Font
     style: Bold
@@ -44,6 +44,7 @@ key_bindings:
   - { key: Back, mods: Super, chars: "\x15" } # Delete all typing <Cmd-Backspace>
   - { key: A, mods: Command, chars: "\x01" } # <Cmd-A> is tmux prefix
   - { key: C, mods: Command, chars: "\x03" } # <Cmd-C> for <C-C>
+  - { key: D, mods: Command, chars: "\x04" }
   - { key: J, mods: Command, chars: "\x0a" }
   - { key: K, mods: Command, chars: "\x0b" }
   - { key: N, mods: Command, chars: "\x0e" }
