@@ -20,6 +20,7 @@ alias l "exa -l -a --icons"
 alias c "clear"
 alias vi "nvim"
 
+alias ga "git add"
 alias gs "git status"
 alias gsc "git commit -S -m"
 alias gp "git push -u origin"
